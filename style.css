@@ -43,7 +43,7 @@ div.redname{
     height: 80vh;
     display: flex;
     align-items: center;
-    background-image: url('logo.png');  /* Replace with your image path */
+    background-image: url('logo_transp.png');  /* Replace with your image path */
     background-position: center;  /* Centers the image horizontally and vertically */
     background-repeat: no-repeat;  /* Prevents the image from repeating */
     background-size: contain;  /* Resizes the image to fit the container while maintaining aspect ratio */
