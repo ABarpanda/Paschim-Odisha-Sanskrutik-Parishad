@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    background-color: rgba(0, 128, 0, 0.372);
+}
+
+:root {
+    --white: #fff;
+    --light-yellow:rgb(255, 255, 0);
+}
+
+.saptapar{
+    background-image: url(Saptapar.png);
+    width: 100%;
+    height: 7vh;
+}
+
+.wrapper {
+    background: radial-gradient(#272727, #1b1b1b);
+    display: grid;
+    grid-template-areas: 'overlap';
+    place-content: center;
+    text-transform: uppercase;
+    height: 10vh;
+}
+
+.wrapper > div {
+    background-clip: text;  
+    -webkit-background-clip: text;
+    /* color: #363833; */
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    grid-area: overlap;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 4px transparent;
+}
+div.redname{
+    background-image: repeating-linear-gradient(var(--white), var(--white));
+    color: red;
+    /* transform: scale(1); */
+}
+.logo{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    background-image: url('logo.png');  /* Replace with your image path */
+    background-position: center;  /* Centers the image horizontally and vertically */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    background-size: contain;  /* Resizes the image to fit the container while maintaining aspect ratio */
+    /* opacity: 0.6; */
+}
