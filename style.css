@@ -1,11 +1,11 @@
 body {
     margin: 0;
-    background-color: rgba(0, 128, 0, 0.372);
+    background-color: var(--light-yellow);
 }
 
 :root {
     --white: #fff;
-    --light-yellow:rgb(255, 255, 0);
+    --light-yellow:rgb(255, 255, 0, 0.5);
 }
 
 .saptapar{
@@ -43,9 +43,35 @@ div.redname{
     height: 80vh;
     display: flex;
     align-items: center;
-    background-image: url('logo_transp.png');  /* Replace with your image path */
+    background-image: url('logo_transp.png'); 
     background-position: center;  /* Centers the image horizontally and vertically */
-    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    background-repeat: no-repeat;
     background-size: contain;  /* Resizes the image to fit the container while maintaining aspect ratio */
     /* opacity: 0.6; */
 }
+
+.loading-animation {
+    display: flex;
+    align-items: center;  
+    justify-content: flex-end;
+    width: 80vh;
+    height: 80vh;
+    border-radius: 50%;
+    animation: change 3s ease-in;
+    /* background-color: aqua; */
+}
+
+.logo .loading-animation img {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    height: 80vh;  
+    width: auto;  
+}
+
+  @keyframes change {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }

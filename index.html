@@ -6,21 +6,34 @@
     <title>POSP Rourkela</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" sizes="16x16 32x32" href="logo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="saptapar"></div>
     <div class="wrapper"><div class="redname"> Paschim Odisha Sanskrutik Parishad, Rourkela </div></div>
-    
     <div class="logo">
-        <marquee behavior="scroll" direction="right" scrollamount="8">
+        <div class="loading-animation"><img src="logo.png"></div>
+        <marquee behavior="scroll" direction="right" scrollamount="8" id="right-scroll">
             <a href="https://example.com/" style="text-decoration: none;
                                                   font-size: 100px; 
                                                   font-family: Arial, Helvetica, sans-serif;
                                                   font-weight: 500;
                                                   color: red;
                                                   text-transform: capitalize;
-                                                    ">WELCOME</a>
+                                                    ">🙏 WELCOME 🙏</a>
         </marquee>
     </div>
+    <script>
+    $(document).ready(function(){
+        $('#right-scroll').hide();
+        $('.loading-animation').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', 
+        function() {
+            $(this).hide(0,function(){
+                $('#right-scroll').show("slow");
+                })
+            })
+        }
+    );
+    </script>
 </body>
 </html>
